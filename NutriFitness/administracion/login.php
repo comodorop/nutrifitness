@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <!-- Title here -->
-        <title>Your Title - CakeFactory</title>
+        <title>Nutri Fitnnes</title>
         <!-- Description, Keywords and Author -->
         <meta name="description" content="Your description">
         <meta name="keywords" content="Your,Keywords">
@@ -24,9 +24,9 @@
         <link href="../css/less-style.css" rel="stylesheet">	
         <!-- Custom CSS -->
         <link href="../css/style.css" rel="stylesheet">
-        <!--[if IE]><link rel="stylesheet" href="css/ie-style.css"><![endif]-->
-
-        <!-- Favicon -->
+        <link rel="stylesheet" href="../alertify/themes/alertify.bootstrap.css"/>
+        <link rel="stylesheet" href="../alertify/themes/alertify.core.css"/>
+        <link rel="stylesheet" href="../alertify/themes/alertify.default.css"/>
         <link rel="shortcut icon" href="#">
     </head>
 
@@ -80,30 +80,31 @@
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12">
                                             <!-- Checkout Form -->
-                                                <div class="form-horizontal" role="form">
+                                            <div class="form-horizontal" role="form">
                                                 <div class="form-group">
                                                     <label for="inputName" class="col-md-2 control-label">Usuario :</label>
                                                     <div class="col-md-8">
-                                                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+                                                        <input type="text" id="txtUsuario" class="form-control" id="inputName">
                                                     </div>
                                                 </div>            
                                                 <div class="form-group">
-                                                    <label for="inputEmail1" class="col-md-2 control-label">Contraseña :</label>
+                                                    <label  class="col-md-2 control-label">Contraseña :</label>
                                                     <div class="col-md-8">
-                                                        <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+                                                        <input type="password" id="txtPass" class="form-control" id="inputEmail1">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                     <label for="inputEmail1" class="col-md-2 control-label"></label>
+                                                    <label for="inputEmail1" class="col-md-2 control-label"></label>
                                                     <div class="col-md-8">
-                                                         <input type="submit" 
-                                                                class="btn btn-primary col-lg-3" 
-                                                                value="Iniciar"
-                                                                title="Iniciar Session"/>
+                                                        <input type="submit"
+                                                               id="btnLogin"
+                                                               class="btn btn-primary col-lg-3" 
+                                                               value="Iniciar"
+                                                               title="Iniciar Session"/>
                                                     </div>
                                                 </div>
-                                                </div>
-                                           
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -138,6 +139,11 @@
         <script src="../js/html5shiv.js"></script>
         <!-- Custom JS -->
         <script src="../js/custom.js"></script>
+        <script src="../alertify/lib/alertify.js"></script>
+        <script src="../alertify/lib/alertify.min.js"></script>
+
+        <script src="js/login.js"></script>
+
         <!-- JS code for this page -->
         <script>
 
