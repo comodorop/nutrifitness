@@ -1,37 +1,32 @@
-<form enctype="multipart/form-data">
-    <h4>Administracion de Imagens del slider</h4>
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <!-- Checkout Form -->
-            <div class="form-horizontal" role="form">
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Imagen :</label>
-                    <div class="col-md-8">
-                        <input type="file" id="archivoImagen">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail1" class="col-md-2 control-label"></label>
-                    <div class="col-md-8">
-                        <input type="submit" 
-                               onclick="subirImagen();"
-                               class="btn btn-primary col-lg-3" 
-                               value="Subir Imagen"
-                               title="Iniciar Session"/>
-                    </div>
-                </div>
-            </div>
+<form enctype="multipart/form-data" class="formulario">
 
-        </div>
+    <label>Subir un Archivo</label>
+    <div class="alert alert-warning">
+        <strong>Aviso.</strong>
+        <br/>
+        Toda imagen para el Slider debera tener las medidas de anchura de <strong>1920 px</strong> 
+        y de altura <strong>900 px.</strong>
     </div>
+    <input name="archivo" type="file" id="imagen" onchange="cambiar()"/>
+    <br>
+    <input type="button" 
+           value="subir imagen" 
+           onclick="subirImagen()"
+           class="btn btn-primary"/>
+    <div class="messages">
+    </div>
+    <div class="showImage">
+    </div>
+    <br>
+    <br>
+    <table class="table" id="tablaSlider">
+        <thead>
+        <th>Imagen</th>
+        <th>Eliminar</th>
+        </thead>
+    </table>
 </form>
-<table class="table table-hover">
-    <thead>
-    <th>
-        Imagen
-    </th>
-    <th>
-        Eliminar
-    </th>
-</thead>
-</table>
+
+
+<!--<script src="../js/jquery.js"></script>
+<script src="js/Slider.js"></script>-->

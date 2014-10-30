@@ -19,7 +19,8 @@
         <!-- Portfolio CSS -->
         <link href="../css/prettyPhoto.css" rel="stylesheet">
         <!-- Font awesome CSS -->
-        <link href="../css/font-awesome.min.css" rel="stylesheet">	
+        <link href="../css/font-awesome.css" rel="stylesheet"/>
+        <!--<link href="../css/font-awesome.min.css" rel="stylesheet">-->	
         <!-- Custom Less -->
         <link href="../css/less-style.css" rel="stylesheet">	
         <!-- Custom CSS -->
@@ -27,13 +28,14 @@
         <!--[if IE]><link rel="stylesheet" href="css/ie-style.css"><![endif]-->
 
         <!-- Favicon -->
+        <link href="../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="../alertify/themes/alertify.bootstrap.css"/>
+        <link rel="stylesheet" href="../alertify/themes/alertify.core.css"/>
+        <link rel="stylesheet" href="../alertify/themes/alertify.default.css"/>
         <link rel="shortcut icon" href="#">
     </head>
 
     <body>
-
-
-
         <!-- Page Wrapper -->
         <div class="wrapper">
             <!-- Header Start -->
@@ -58,6 +60,10 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#" id="slider">Slider</a></li>
                             <li><a href="#" id="pedidos">Pedidos</a></li>
+                            <li><a href="#" id="tipoPagos">Tipos Pagos</a></li>
+                            <li><a href="#" id="mision">Misión</a></li>
+                            <li><a href="#" id="vision">Visión</a></li>
+                            <li><a href="#" id="valores">Valores</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -69,7 +75,7 @@
                             <div class="checkout">
                                 <div class="container" id="contenedor">
                                     <!-- Heading -->
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -102,8 +108,14 @@
         <script src="../js/html5shiv.js"></script>
         <!-- Custom JS -->
         <script src="../js/custom.js"></script>
+        <script src="../alertify/lib/alertify.js"></script>
+        <script src="../alertify/lib/alertify.min.js"></script>
         <script src="js/Slider.js"></script>
         <script src="js/pedidos.js"></script>
+        <script src="js/tiposPagos.js"></script>
+        <script src="js/mision.js"></script>
+        <script src="js/vision.js"></script>
+        <script src="js/valores.js"></script>
         <!-- JS code for this page -->
         <script>
 
