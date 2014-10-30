@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <!-- Title here -->
-        <title>Proximamente - Nutrifitness</title>
+        <title>Próximamente - Nutrifitness</title>
         <!-- Description, Keywords and Author -->
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -97,7 +97,10 @@
                                                 <i class="fa fa-phone br-green"></i> <span>9992945407 / 9992941911</span>
                                                 <div class="clearfix"></div>
                                                 <!-- Email / Icon -->
-                                                <i class="fa fa-envelope-o br-lblue"></i> <span><a href="#">nutrifitnessmexico@gmail.com</a></span>
+                                                <i class="fa fa-envelope-o br-lblue"></i> <span><a href="mailto:nutrifitnessmexico@gmail.com">nutrifitnessmexico@gmail.com</a></span>
+                                                <div class="clearfix"></div>
+                                                <!-- Facebook / Icon -->
+                                                <i class="fa fa fa-facebook-square br-blue"></i> <span><a href="https://www.facebook.com/nutrifitnessmex">nutrifitnessmex</a></span>
                                                 <div class="clearfix"></div>
                                             </div>
                                         </div>
