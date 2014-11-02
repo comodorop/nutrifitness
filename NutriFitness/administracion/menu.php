@@ -1,6 +1,10 @@
+<?php
+include './verificacionSessiones.php';
+$verificacion = new verificacionSessiones();
+$verificacion->verificarSessionLogueada();
+?>
 <!DOCTYPE html>
 <html>
-
     <!-- Mirrored from responsivewebinc.com/premium/cakefactory12/0-base.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Oct 2014 04:11:59 GMT -->
     <head>
         <meta charset="utf-8">
@@ -64,6 +68,7 @@
                             <li><a href="#" id="mision">Misión</a></li>
                             <li><a href="#" id="vision">Visión</a></li>
                             <li><a href="#" id="valores">Valores</a></li>
+                            <li><a href="cerrarSession.php" id="valores">Cerrar Sessión</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->

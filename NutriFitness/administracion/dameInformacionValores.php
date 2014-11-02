@@ -21,7 +21,7 @@ if ($datos == false) {
             </td>
             <td>
         <center>
-            <a href="#" onclick="dameMision();"> <i class="fa fa-refresh fa-2x"></i></a>
+            <a href="#" onclick="dameValores();"> <i class="fa fa-refresh fa-2x"></i></a>
         </center>
         </td>
         </tr>

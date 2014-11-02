@@ -4,7 +4,7 @@
             <!-- Checkout Form -->
             <div class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Tipo Pago :</label>
+                    <label class="col-md-2 control-label">Misión :</label>
                     <div class="col-md-8">
                         <textarea class="form-control" rows="10" id="textMision" >
                         </textarea>

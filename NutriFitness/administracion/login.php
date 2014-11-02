@@ -1,3 +1,8 @@
+<?php
+include './verificacionSessiones.php';
+$verificacion = new verificacionSessiones();
+$verificacion->verificarSessionIniciada();
+?>
 <!DOCTYPE html>
 <html>
 
