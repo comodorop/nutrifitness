@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="app_usuario_registro">
 
     <!-- Mirrored from responsivewebinc.com/premium/cakefactory12/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Oct 2014 04:11:54 GMT -->
     <head>
@@ -30,7 +30,7 @@
         <link rel="shortcut icon" href="#">
     </head>
 
-    <body>
+    <body data-ng-controller="usuario_registro">
 
 
         <!-- Shopping cart Modal -->
@@ -127,88 +127,94 @@
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <!-- Checkout Form -->
-                                <form class="form-horizontal" role="form">
+                                <form id="frm-registro" class="form-horizontal" role="form">
                                     <div class="form-group">
-                                        <label for="inputName" class="col-md-2 control-label">Name</label>
+                                        <label for="inputName" class="col-md-2 control-label">Nombre</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" id="inputName" placeholder="Name">
-                                        </div>
-                                    </div>            
-                                    <div class="form-group">
-                                        <label for="inputEmail1" class="col-md-2 control-label">Email</label>
-                                        <div class="col-md-8">
-                                            <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+                                            <input data-ng-model="nom" type="text" class="form-control" id="inputName" placeholder="Nombre">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputPhone" class="col-md-2 control-label">Phone</label>
+                                        <label for="inputAddress" class="col-md-2 control-label">Dirección</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                                            <textarea data-ng-model="dir" class="form-control" id="inputAddress" rows="3" placeholder="La dirección donde haremos llegar tus pedidos"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputCountry" class="col-md-2 control-label">Country</label>
-                                        <div class="col-md-8">
-                                            <select class="form-control" id="inputCountry">
-                                                <option>Select Country</option>
-                                                <option>USA</option>
-                                                <option>India</option>
-                                                <option>Canada</option>
-                                                <option>UK</option>
-                                            </select>
-                                        </div>
-                                    </div>              
-                                    <div class="form-group">
-                                        <label for="inputAddress" class="col-md-2 control-label">Address</label>
-                                        <div class="col-md-8">
-                                            <textarea class="form-control" id="inputAddress" rows="3" placeholder="Address"></textarea>
+                                        <label for="inputName" class="col-md-2 control-label">Codigo postal</label>
+                                        <div class="col-md-4">
+                                            <input data-ng-model="cp" type="text" class="form-control" id="inputName" placeholder="Codigo postal">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputZip" class="col-md-2 control-label">Zip Code</label>
+                                        <label for="inputName" class="col-md-2 control-label">Telefono</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" id="inputZip" placeholder="Zip Code">
+                                            <input data-ng-model="tel" type="text" class="form-control" id="inputName" placeholder="Telefono">
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="inputName" class="col-md-2 control-label">Celular</label>
+                                        <div class="col-md-8">
+                                            <input data-ng-model="cel" type="text" class="form-control" id="inputName" placeholder="Celular">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail1" class="col-md-2 control-label">Correo electrónico</label>
+                                        <div class="col-md-8">
+                                            <input type="email" class="form-control" id="inputEmail1" placeholder="Correo electrónico">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPhone" class="col-md-2 control-label">Contraseña</label>
+                                        <div class="col-md-8">
+                                            <input data-ng-model="pas" type="text" class="form-control" id="inputPhone" placeholder="Contraseña">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPhone" class="col-md-2 control-label">Reescribir contraseña</label>
+                                        <div class="col-md-8">
+                                            <input data-ng-model="ree" type="text" class="form-control" id="inputPhone" placeholder="Reescribir contraseña">
+                                        </div>
+                                    </div>                                                                     
                                     <div class="form-group">
                                         <div class="col-md-offset-2 col-md-8">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox"> Accept Terms & Conditions
+                                                    <input data-ng-model="term" type="checkbox"> Acepto los terminos y conciones
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-offset-2 col-md-8">
-                                            <button type="submit" class="btn btn-danger btn-sm">Confirm Order</button>&nbsp;
+                                            <button data-ng-click="registrar()" type="button" class="btn btn-danger btn-sm">Registrame</button>&nbsp;
                                             <button type="reset" class="btn btn-default btn-sm">Reset</button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-<!--                            <div class="col-md-5 col-sm-6">
-                                 Checkout sidebar items 
-                                <div class="sidebar-item">
-                                     Heading 
-                                    <h5 class="pull-left">Free Delivery</h5>
-                                     Sidebar content icon 
-                                    <i class="fa fa-truck br-green pull-right"></i>
-                                    <div class="clearfix"></div>
-                                     Sidebar Paragraph 
-                                    <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et conse ctetur adipi sicing elit, sed do eiusmod dolore magna aliqua.</p>
-                                </div>
-                                 Checkout sidebar items 
-                                <div class="sidebar-item">
-                                     Heading 
-                                    <h5 class="pull-left">Complain / Support</h5>
-                                     Sidebar content icon 
-                                    <i class="fa fa-headphones br-red pull-right"></i>
-                                    <div class="clearfix"></div>
-                                     Sidebar Paragraph 
-                                    <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et conse ctetur adipi sicing elit, sed do eiusmod dolore magna aliqua.</p>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="col-md-5 col-sm-6">
+                                                             Checkout sidebar items 
+                                                            <div class="sidebar-item">
+                                                                 Heading 
+                                                                <h5 class="pull-left">Free Delivery</h5>
+                                                                 Sidebar content icon 
+                                                                <i class="fa fa-truck br-green pull-right"></i>
+                                                                <div class="clearfix"></div>
+                                                                 Sidebar Paragraph 
+                                                                <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et conse ctetur adipi sicing elit, sed do eiusmod dolore magna aliqua.</p>
+                                                            </div>
+                                                             Checkout sidebar items 
+                                                            <div class="sidebar-item">
+                                                                 Heading 
+                                                                <h5 class="pull-left">Complain / Support</h5>
+                                                                 Sidebar content icon 
+                                                                <i class="fa fa-headphones br-red pull-right"></i>
+                                                                <div class="clearfix"></div>
+                                                                 Sidebar Paragraph 
+                                                                <p>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et conse ctetur adipi sicing elit, sed do eiusmod dolore magna aliqua.</p>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                 </div>
@@ -364,6 +370,8 @@
 
 
         <!-- Javascript files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.11/angular.min.js"></script>
+        <script src="js/usuario_registro.js"></script>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
         <!-- Bootstrap JS -->
