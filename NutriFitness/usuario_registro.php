@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="app_usuario_registro">
+<html>
 
     <!-- Mirrored from responsivewebinc.com/premium/cakefactory12/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Oct 2014 04:11:54 GMT -->
     <head>
@@ -30,7 +30,7 @@
         <link rel="shortcut icon" href="#">
     </head>
 
-    <body data-ng-controller="usuario_registro">
+    <body>
 
 
         <!-- Shopping cart Modal -->
@@ -127,68 +127,69 @@
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <!-- Checkout Form -->
-                                <form id="frm-registro" class="form-horizontal" role="form">
+                                <form id="form" class="form-horizontal" role="form">
                                     <div class="form-group">
                                         <label for="inputName" class="col-md-2 control-label">Nombre</label>
                                         <div class="col-md-8">
-                                            <input data-ng-model="nom" type="text" class="form-control" id="inputName" placeholder="Nombre">
+                                            <input  type="text" title="Se necesita un nombre"  class="form-control" name="inputName" placeholder="Nombre" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputAddress" class="col-md-2 control-label">Dirección</label>
                                         <div class="col-md-8">
-                                            <textarea data-ng-model="dir" class="form-control" id="inputAddress" rows="3" placeholder="La dirección donde haremos llegar tus pedidos"></textarea>
+                                            <textarea title="Se necesita una direccion de entrega"  class="form-control" name="inputAddress" rows="3" placeholder="La dirección donde haremos llegar tus pedidos" required></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputName" class="col-md-2 control-label">Codigo postal</label>
                                         <div class="col-md-4">
-                                            <input data-ng-model="cp" type="text" class="form-control" id="inputName" placeholder="Codigo postal">
+                                            <input  type="number" class="form-control" name="inputCp" placeholder="Codigo postal" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputName" class="col-md-2 control-label">Telefono</label>
                                         <div class="col-md-8">
-                                            <input data-ng-model="tel" type="text" class="form-control" id="inputName" placeholder="Telefono">
+                                            <input  type="number" class="form-control" name="inputTel" placeholder="Telefono" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputName" class="col-md-2 control-label">Celular</label>
                                         <div class="col-md-8">
-                                            <input data-ng-model="cel" type="text" class="form-control" id="inputName" placeholder="Celular">
+                                            <input  type="number" class="form-control" name="inputCel" placeholder="Celular" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputEmail1" class="col-md-2 control-label">Correo electrónico</label>
                                         <div class="col-md-8">
-                                            <input type="email" class="form-control" id="inputEmail1" placeholder="Correo electrónico">
+                                            <input type="email" class="form-control" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" name="inputEmail" placeholder="Correo electrónico" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-md-2 control-label">Contraseña</label>
                                         <div class="col-md-8">
-                                            <input data-ng-model="pas" type="text" class="form-control" id="inputPhone" placeholder="Contraseña">
+                                            <input type="text" class="form-control" name="inputPass" id="pass" placeholder="Contraseña"  required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-md-2 control-label">Reescribir contraseña</label>
                                         <div class="col-md-8">
-                                            <input data-ng-model="ree" type="text" class="form-control" id="inputPhone" placeholder="Reescribir contraseña">
+                                            <input  type="text" class="form-control" name="inputRepass" id="repass" placeholder="Reescribir contraseña" required>
                                         </div>
                                     </div>                                                                     
                                     <div class="form-group">
                                         <div class="col-md-offset-2 col-md-8">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input data-ng-model="term" type="checkbox"> Acepto los terminos y conciones
+                                                    <input name="inputChk" id="chkterm"  type="checkbox"> Acepto los terminos y conciones
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-offset-2 col-md-8">
-                                            <button data-ng-click="registrar()" type="button" class="btn btn-danger btn-sm">Registrame</button>&nbsp;
-                                            <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                                            <button  type="submit" hidden></button>
+                                            <button  type="button" class="btn btn-danger btn-sm" id="btnreg">Registrar</button>&nbsp;
+                                            <button type="reset" class="btn btn-default btn-sm">Limpiar formulario</button>
                                         </div>
                                     </div>
                                 </form>
@@ -369,11 +370,11 @@
 
 
 
-        <!-- Javascript files -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.11/angular.min.js"></script>
-        <script src="js/usuario_registro.js"></script>
+
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
+        <!-- Javascript files -->
+        <script src="js/usuario_registro.js"></script>
         <!-- Bootstrap JS -->
         <script src="js/bootstrap.min.js"></script>
         <!-- Pretty Photo JS -->
