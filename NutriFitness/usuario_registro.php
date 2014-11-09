@@ -167,13 +167,13 @@
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-md-2 control-label">Contraseña</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" name="inputPass" id="pass" placeholder="Contraseña"  required>
+                                            <input type="password" class="form-control" name="inputPass" id="pass" placeholder="Contraseña"  required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-md-2 control-label">Reescribir contraseña</label>
                                         <div class="col-md-8">
-                                            <input  type="text" class="form-control" name="inputRepass" id="repass" placeholder="Reescribir contraseña" required>
+                                            <input  type="password" class="form-control" name="inputRepass" id="repass" placeholder="Reescribir contraseña" required>
                                         </div>
                                     </div>                                                                     
                                     <div class="form-group">
